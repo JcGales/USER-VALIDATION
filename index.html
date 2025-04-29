@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome Validation Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="index.html"></script> 
+    <script src="https://kit.fontawesome.com/1897f391ab.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <h2><i class="fa-solid fa-envelope"></i> Contact Us</h2>
+      <form id="contact-form" onsubmit="return formValidation()">
+
+        <div class="input-group">
+            <label for="contact-name"><i class="fa-solid fa-user"></i> Name:</label>
+            <div class="input-container">
+                <input type="text" id="contact-name" name="name" placeholder="Enter your name" onkeyup="validateName()">
+                <span id="name-error-before" class="error-icon"><i class="fa-solid fa-circle-xmark"></i></span>
+                <span id="name-error-after" class="success-icon"><i class="fa-solid fa-circle-check"></i></span>
+
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label for="contact-phone"><i class="fa-solid fa-phone"></i> Phone:</label>
+            <div class="input-container">
+                <input type="text" id="contact-phone" name="phone" placeholder="Enter your phone number"  onkeyup="validatePhone()">
+                <span id="phone-error-before" class="error-icon"><i class="fa-solid fa-circle-xmark"></i></span>
+                <span id="phone-error-after" class="success-icon"><i class="fa-solid fa-circle-check"></i></span>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label for="contact-email"><i class="fa-solid fa-at"></i> Email:</label>
+            <div class="input-container">
+                <input type="text" id="contact-email" name="email" placeholder="Enter your email"  onkeyup="validateEmail()">
+                <span id="email-error-before" class="error-icon"><i class="fa-solid fa-circle-xmark"></i></span>
+                <span id="email-error-after" class="success-icon"><i class="fa-solid fa-circle-check"></i></span>
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label for="contact-message"><i class="fa-solid fa-comment"></i> Message:</label>
+            <div class="input-container">
+                <textarea id="contact-message" name="message" placeholder="Enter your message" onkeyup="validateMessage()"></textarea>
+                  <span id="message-error-before" class="error-icon"><i class="fa-solid fa-circle-xmark"></i></span>
+                  <span id="message-error-after" class="success-icon"><i class="fa-solid fa-circle-check"></i></span>
+            </div>
+        </div>
+
+       
+        <button type="submit" id="submit-btn"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+        <span id="submit-error-before" class="submit-error-icon"><i class="fa-solid fa-circle-xmark"></i>Something is wrong or unfilled</span>
+        <span id="submit-error-after" class="submit-success-icon"><i class="fa-solid fa-circle-check"></i>Succesfully Sent!</span>
+    </form>
+</div>
+
+</body>
+</html>
